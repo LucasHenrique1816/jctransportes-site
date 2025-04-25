@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="cotacao2.css" />
     <link rel="shortcut icon" href="Logotipo2.png">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   </head>
   <body>
     <!-- Barra de navegação -->
@@ -34,7 +35,7 @@
       </nav>
     </header>
 
-    <a href="https://wa.me/5511987654321?text=Olá,%20gostaria%20de%20mais%20informações" class="whatsapp-button">
+    <a href="https://wa.me/5511993767300?text=Olá,%20gostaria%20de%20mais%20informações" class="whatsapp-button">
       <img src="whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
   </a>
 
@@ -107,8 +108,8 @@
     </div>
     <div id="cotacao" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300" 
     data-aos-easing="ease-in-sine" >
-      <h1>Cotação de frete</h1>
-    <form action="https://formsubmit.co/230412014@eniac.edu.br" method="POST" class="formCotacao">
+      <h1>Faça a sua Cotação de frete!</h1>
+    <form action="javascript:void(0);" method="POST" class="formCotacao">
 
     <div class="form-row-2colunas">
       <Label>
@@ -126,14 +127,15 @@
     <div class="form-row-2colunas">
 
       <Label>
+        <span class="texto">E-mail</span> 
+        <input type="text" id="email" name="email" placeholder="exemplo@exemplo.com"> 
+    </Label>
+
+      <Label>
           <span class="texto">CNPJ do Remetente</span> 
           <input type="cnpj" id="cnpjRemetente" name="cnpjRemetente" placeholder="xx.xxx.xxx/xxxx-xx"> 
       </Label>
       
-      <Label>
-          <span class="texto">Cidade do Remetente</span> 
-          <input type="text" id="cidadeRemetente" name="cidadeRemetente" placeholder="Cidade e Estado"> 
-      </Label>
 
       </div>
       
@@ -169,24 +171,24 @@
        
       <Label>
           <span class="texto">Tipo da mercadoria</span> 
-          <input type="text" id="mercadoriaTipo" name="mercadoriaTipo" placeholder="Cidade e Estado"> 
+          <input type="text" id="mercadoriaTipo" name="mercadoriaTipo" placeholder="exemplo:Moveis"> 
       </Label>
     </div>
     <div class="form-row-2colunas"> 
       <Label>
           <span class="texto">Quantidade de volumes</span> 
-          <input type="text" id="mercadoriaVolume" name="mercadoriaVolume" placeholder="Cidade e Estado"> 
+          <input type="text" id="mercadoriaVolume" name="mercadoriaVolume" placeholder="Digite a quantidade de volumes"> 
       </Label>
 
       <Label>
           <span class="texto">Peso total</span> 
-          <input type="text" id="mercadoriaPeso" name="mercadoriaPeso" placeholder="Cidade e Estado"> 
+          <input type="text" id="mercadoriaPeso" name="mercadoriaPeso" placeholder="Digite o peso"> 
       </Label>
       </div>
       <div class="form-row-2colunas">
       <Label>
           <span class="texto">Valor da mercadoria</span> 
-          <input type="text" id="mercadoriaValor" name="mercadoriaValor" placeholder="Cidade e Estado"> 
+          <input type="text" id="mercadoriaValor" name="mercadoriaValor" placeholder="Digite o valor da mercadoria"> 
       </Label>
 
       <Label>
@@ -264,6 +266,46 @@
       }
 
       AOS.init();
+
+      (function() {
+    emailjs.init("-gBK2Xa84xxfD-nM6"); // Substitua "YOUR_USER_ID" com o seu User ID do EmailJS
+  })();
+
+  document.querySelector(".formCotacao").addEventListener("submit", function(event) {
+    event.preventDefault(); // Impede o envio normal do formulário
+
+    var formData = new FormData(this); // Pega todos os dados do formulário
+    var formObject = {};
+
+    formData.forEach((value, key) => {
+      formObject[key] = value; // Preenche o objeto com os dados
+    });
+
+    console.log(formObject); // Exibe os dados do formulário no console
+
+    emailjs.send("service_r94751k", "template_dd924rq", {
+      nome: formObject.nome,
+  telefone: formObject.telefone,
+  email: formObject.email,
+  cnpjRemetente: formObject.cnpjRemetente,
+  cnpjDestinatario: formObject.cnpjDestinatario,
+  cidadeDestino: formObject.cidadeDestino,
+  nomeComprador: formObject.nomeComprador,
+  telefoneComprador: formObject.telefoneComprador,
+  cnpjPagador: formObject.cnpjPagador,
+  mercadoriaTipo: formObject.mercadoriaTipo,
+  mercadoriaVolume: formObject.mercadoriaVolume,
+  mercadoriaPeso: formObject.mercadoriaPeso,
+  mercadoriaValor: formObject.mercadoriaValor,
+  mercadoriaAltura: formObject.mercadoriaAltura
+  // Adicione outros campos conforme necessário
+})
+.then(function(response) {
+  alert("Cotação enviada com sucesso! O valor será enviado para o e-mail fornecido!");
+}, function(error) {
+  alert("Erro ao enviar a cotação! " + error.text);
+});
+  });
 
     </script>
   </body>
