@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>J&C Transportes</title>
+    <!-- Link para o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="cotacao2.css" />
+    <link rel="shortcut icon" href="Logotipo2.png">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Barra de navegação -->
+    <header>
+      
+      <nav class="nav">
+          <!-- Logo -->
+          <img class="logo" src="Logotipo1.png" alt="Logotipo" width="176" height="96" />
+          <!-- Menu Hamburger (visível apenas em telas pequenas) -->
+          <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <!-- Lista de botões -->
+          <ul class="botoes">
+            <li><a class="botao1" href="#home">Home</a></li>
+            <li><a class="botao1" href="#sobrenos">Sobre Nós</a></li>
+            <li><a class="botao1" href="#contato">Contato</a></li>
+            <li><a class="botao2" href="#cotacao">Cotação de Frete</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <a href="https://wa.me/5511987654321?text=Olá,%20gostaria%20de%20mais%20informações" class="whatsapp-button">
+      <img src="whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+  </a>
+
+    
+    <!-- Pagina Home -->
+    <div id="home" class="home">
+      <!-- Coluna da esquerda com o título, texto e botão -->
+      <div class="home-coluna-esquerda"data-aos="fade-left" data-aos-duration="2000" data-aos-offset="300" 
+      data-aos-easing="ease-in-sine">
+        <h1>Tecnologia e eficiência <br> no transporte de cargas</h1>
+        <p>Especializados em cargas fracionadas e dedicadas, oferecemos cobertura nacional com agilidade, segurança e economia. <br> Conte com nossos serviços de coleta e entrega para obter soluções sob medida e atendimento de excelência.</p>
+        <a class="botaohome" href="#cotacao">Cotação de Frete</a>
+      </div>
+
+      <!-- Coluna da direita com a imagem -->
+      <div class="home-coluna-direita"data-aos="fade-left" data-aos-duration="2000" data-aos-offset="300" 
+      data-aos-easing="ease-in-sine">
+        <img class="caminhones" src="caminhones.svg" alt="caminhao da transportadora" />
+      </div>
+    </div>
+
+    <!-- Pagina sobre nos -->
+    <div id="sobrenos" class="sobrenos" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="300" 
+    data-aos-easing="ease-in-sine">  
+      <!-- Banner 1 Sobre Nos -->
+      <picture> 
+        <source media="(max-width: 440px)" srcset="https://imgur.com/u2GR6pz.png">
+        <source media="(max-width: 1034.9px)" srcset="https://imgur.com/xn1qPzY.png">
+        <img class="banner" src="bannerfrente.png" alt="Banner1" />
+      </picture>
+      <!-- Banner 2 Nossos Serviços-->
+      <picture>
+      <source media="(max-width: 440px)" srcset="https://imgur.com/m43WgFk.png">
+      <source media="(max-width: 1034.9px)" srcset="https://imgur.com/nvpy7X6.png">
+      <img class="banner" src="bannertras.png" alt="Banner2" />
+      </picture>
+      <!-- Botão Esquerda -->
+      <button class="slider-botao left" onclick="plusDivs(-1)">
+        <img class="botao left" src="esquerda.png" alt="botao esquerda" height="20px" width="20px">
+      </button>
+      <!-- Botão Direita -->
+      <button class="slider-botao right" onclick="plusDivs(+1)">
+        <img class="botao right" src="direita.png" alt="botao direita" height="20px" width="20px">
+      </button>
+    </div>
+
+    <!-- Pagina Contato -->
+    <div id="contato" class="contato" data-aos="fade-down" data-aos-duration="2000" data-aos-offset="300" 
+    data-aos-easing="linear">
+      <!-- Coluna da esquerda com o título, e endereço -->
+      <div class="contato-coluna-esquerda">
+        <h2>Endereço</h2>
+        <h5>Galpão:<br> Rua Soldado Eurípedes de Lima, 36<br> Pq.Novo Mundo<br> São Paulo-SP <br> Cep 02178-030</h5>
+      </div>
+
+      <!-- Coluna do meio com o mapa -->
+      <div class="contato-coluna-meio">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.2782121487585!2d-46.57265072540745!3d-23.52249396016407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5f1e966cdab1%3A0xac7ba8f095f90f77!2sR.%20Sd.%20Eur%C3%ADpedes%20Rodrigues%20Lima%2C%2036%20-%20Parque%20Novo%20Mundo%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002178-030!5e0!3m2!1spt-BR!2sbr!4v1739990134196!5m2!1spt-BR!2sbr" style="border:2px solid var(--Color-style-secondary-Normal, #0F3969); border-radius: 15px; box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.30);"></iframe>
+      </div>
+
+      <!-- Coluna da direita com os contatos -->
+      <div class="contato-coluna-direita">
+        <h2>Contatos</h2>
+        <h5>Tel: (11) 2623 - 4660 <br>
+          <a href="https://wa.me/5511993767300">Tel: (11) 9 9376 - 7300</a> <br>
+          transportesjc366@gmail.com.br<br> 
+          financeirosp@jctransporteslog.com.br<br>
+          cotacaosp@jctransporteslog.com.br</h5>
+      </div>
+    </div>
+    <div id="cotacao" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300" 
+    data-aos-easing="ease-in-sine" >
+      <h1>Cotação de frete</h1>
+    <form action="https://formsubmit.co/23041214@eniac.edu.br" method="POST" class="formCotacao">
+
+    <div class="form-row-2colunas">
+      <Label>
+        <span class="texto">Nome</span> 
+        <input type="text" id="nome" name="nome" placeholder="digite seu nome"> 
+      </Label>
+        
+      
+      <Label>
+          <span class="texto">Telefone</span>
+          <input type="tel" id="telefone" name="telefone" placeholder="xx xxxxx-xxxx">
+      </Label>
+    </div>
+
+    <div class="form-row-2colunas">
+
+      <Label>
+          <span class="texto">CNPJ do Remetente</span> 
+          <input type="cnpj" id="cnpjRemetente" name="cnpjRemetente" placeholder="xx.xxx.xxx/xxxx-xx"> 
+      </Label>
+      
+      <Label>
+          <span class="texto">Cidade do Remetente</span> 
+          <input type="text" id="cidadeRemetente" name="cidadeRemetente" placeholder="Cidade e Estado"> 
+      </Label>
+
+      </div>
+      
+      <div class="form-row-2colunas"> 
+      <Label>
+          <span class="texto">CNPJ do Destinatario</span> 
+          <input type="cnpj" id="cnpjDestinatario" name="cnpjDestinatario" placeholder="xx.xxx.xxx/xxxx-xx"> 
+      </Label>
+      
+      <Label>
+          <span class="texto">Cidade de Destino</span> 
+          <input type="text" id="cidadeDestino" name="cidadeDestino" placeholder="Cidade e Estado"> 
+      </Label>
+    </div>
+
+    <div class="form-row-2colunas">     
+      <Label>
+          <span class="texto">Nome do Comprador</span> 
+          <input type="text" id="nomeComprador" name="nomeComprador" placeholder="digite o nome"> 
+        </Label>
+          
+      <Label>
+          <span class="texto">Telefone do comprador</span>
+            <input type="tel" id="telefoneComprador" name="telefoneComprador" placeholder="xx xxxxx-xxxx">
+      </Label>
+      
+     </div>
+     <div class="form-row-2colunas">
+      <Label>
+          <span class="texto">CNPJ Pagador do frete</span> 
+          <input type="cnpj" id="cnpjPagador" name="cnpjPagador" placeholder="xx.xxx.xxx/xxxx-xx"> 
+      </Label>
+       
+      <Label>
+          <span class="texto">Tipo da mercadoria</span> 
+          <input type="text" id="mercadoriaTipo" name="mercadoriaTipo" placeholder="Cidade e Estado"> 
+      </Label>
+    </div>
+    <div class="form-row-2colunas"> 
+      <Label>
+          <span class="texto">Quantidade de volumes</span> 
+          <input type="text" id="mercadoriaVolume" name="mercadoriaVolume" placeholder="Cidade e Estado"> 
+      </Label>
+
+      <Label>
+          <span class="texto">Peso total</span> 
+          <input type="text" id="mercadoriaPeso" name="mercadoriaPeso" placeholder="Cidade e Estado"> 
+      </Label>
+      </div>
+      <div class="form-row-2colunas">
+      <Label>
+          <span class="texto">Valor da mercadoria</span> 
+          <input type="text" id="mercadoriaValor" name="mercadoriaValor" placeholder="Cidade e Estado"> 
+      </Label>
+
+      <Label>
+          <span class="texto">Medidas dos volumes (cm)</span> 
+          <input type="text" id="mercadoriaAltura" name="mercadoriaAltura" placeholder="Altura x Largura x Comprimento">
+      </Label>
+
+      </div>
+
+      <button class="botaoCotar" type="submit">COTAR</button>
+      </div>
+
+
+  
+      
+  </form>
+    
+    <!-- Rodapé -->
+    <div class="rodape">
+      <!-- Logo -->
+      <div class="logo-rodape">
+        <img class="logo2" src="Logotipo2.png" alt="LogotipoRodape" width="176" height="96" />
+      </div>
+      <h3>“O Senhor é meu Pastor, nada me faltará”</h3>
+    </div>
+
+        <!-- Link para o arquivo JS do AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+      
+    <!-- Inicializando o AOS -->
+    <script>
+    
+  
+
+      // Função para alternar a visibilidade do menu na versão mobile
+      function toggleMenu() {
+        const menu = document.querySelector(".botoes"); // Seleciona a lista de botões
+        menu.classList.toggle("active"); // Alterna a classe 'active' para mostrar/ocultar o menu
+      }
+
+      // Função para passar o Slider
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("banner");
+        var leftButton = document.querySelector(".slider-botao.left");
+        var rightButton = document.querySelector(".slider-botao.right");
+        
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        
+        for (i = 0; i < x.length; i++) {
+          x[i].classList.remove("active");
+        }
+        x[slideIndex-1].classList.add("active");
+
+        // Controle da visibilidade dos botões slider
+        if (slideIndex === 1) {
+          leftButton.classList.add("hidden");
+        } else {
+          leftButton.classList.remove("hidden");
+        }
+
+        if (slideIndex === x.length) {
+          rightButton.classList.add("hidden");
+        } else {
+          rightButton.classList.remove("hidden");
+        }
+      }
+
+      AOS.init();
+
+    </script>
+  </body>
+</html>
