@@ -303,25 +303,37 @@ body {
     /* Barra de navegação */
     .botaohome {
       width: 261px; /* O botão ocupa toda a largura da tela no mobile */
-      margin-top: 20px; /* Espaço entre o botão e o texto */
-      margin-left: 500px; /* Espaço à esquerda */
       padding: 50px; /* Padding interno */
+      justify-content: center;
     }
   
     .hamburger {
       display: flex; /* Exibe o menu hamburger em telas menores */
     }
+    .nav {
+      z-index: 1000; /* Coloca a barra de navegação sobre outros elementos */
+      top: 0;
+position: absolute; /* Coloca o menu fora do fluxo normal */
+justify-content: flex-end;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: flex-start; /* Posiciona a logotipo no início */
+      align-items: center; /* Centraliza verticalmente */
+      width: auto; /* Ajusta a largura automaticamente */
+    }
   
     .botoes {
       display: none; /* Esconde o menu na versão mobile */
+      align-items: center;
       flex-direction: column; /* Organiza os botões em coluna */
-      width: 100%; /* A lista de botões ocupa toda a largura disponível */
-      text-align: center; /* Centraliza os itens de texto */
+      width: 100vw; /* A lista de botões ocupa toda a largura disponível */
       position: absolute; /* Coloca o menu fora do fluxo normal */
-      top: 150px; /* Distância do topo */
-      left: 0; /* Alinha à esquerda */
+      z-index: 1000; /* Coloca a barra de navegação sobre outros elementos */
+      top: 69px;
+      padding-bottom: 5px;
       background-color: #0f3969; /* Cor de fundo do menu no mobile */
-      z-index: 1; /* Coloca o menu acima dos outros itens */
       opacity: 0; /* Inicialmente invisível */
       transition: opacity 1s ease, transform 0.9s ease; /* Animação suave de fade-in */
       transform: translateY(-20px); /* Inicialmente o menu está acima da sua posição */
@@ -348,7 +360,6 @@ body {
       justify-content: center; /* Centraliza os itens verticalmente */
       align-items: center; /* Centraliza os itens horizontalmente */
       margin-top: 150px; /* Espaço superior para garantir que o conteúdo não sobreponha a barra de navegação */
-      padding: 0 20px; /* Padding nas laterais para garantir que o conteúdo não fique colado nas bordas */
     }
   
     .home-coluna-esquerda,
@@ -361,14 +372,14 @@ body {
     }
   
     .home-coluna-direita .caminhones {
-      width: 100%; /* A imagem ocupa toda a largura da coluna */
+      width: 100vw; /* A imagem ocupa toda a largura da coluna */
       height: auto; /* Mantém a altura proporcional à largura da imagem */
-      margin-top: 20px; /* Adiciona um pequeno espaço entre o botão e a imagem */
+       left: 0;
     }
   
     .home-coluna-esquerda h1,
     .home-coluna-esquerda p {
-      width: 100%; /* Garante que os elementos ocupem toda a largura disponível da coluna */
+      width: 100vw; /* Garante que os elementos ocupem toda a largura disponível da coluna */
       text-align: center; /* Centraliza o texto no mobile */
       justify-content: center; /* Centraliza o conteúdo */
     }
@@ -389,6 +400,7 @@ body {
       width: 100%; /* A coluna ocupa toda a largura da tela no mobile */
       margin-bottom: 20px; /* Espaçamento entre as colunas */
       align-items: center; /* Centraliza o conteúdo */
+      justify-content: center;
     }
   
     .contato .contato-coluna-esquerda h2,
@@ -402,144 +414,30 @@ body {
     }
   
     .contato .contato-coluna-meio iframe {
-      width: 100%; /* O iframe ocupa toda a largura da coluna */
+      width: 50vw; /* O iframe ocupa toda a largura da coluna */
+      justify-content: center;
       height: auto; /* Mantém a altura proporcional à largura do iframe */
     }
   
     /*Rodape*/
 
     .rodape {
+      margin-top: 20px;
       display: flex; /* Exibe o conteúdo em coluna no mobile */
       flex-direction: column; /* Organiza os itens em coluna */
       align-items: center; /* Centraliza os itens horizontalmente */
       width: 100%; /* A coluna ocupa toda a largura da tela no mobile */
       margin-bottom: 20px; /* Espaçamento entre as colunas */
     }
-  }
-/* Responsividade para telas menores (mobile e tablet) */
-@media (max-width: 430px) {
-  /*Barra de Navegação*/
-  .botaohome {
-    width: 261px; /* O botão ocupa toda a largura da tela no mobile */
-    margin-top: 20px; /* Espaço entre o botão e o texto */
-    margin-left: 500px; /* Espaço à esquerda */
-    padding: 50px; /* Padding interno */
-  }
 
-  .hamburger {
-    display: flex; /* Exibe o menu hamburger em telas menores */
+    .whatsapp-icon {
+      position: fixed; /* Fixa o botão na tela */
+      background-color: transparent;
+      bottom: 20px; /* Distância do fundo */
+      right: 20px; /* Distância da direita */
+      z-index: 1000; /* Garante que o botão esteja acima de outros elementos */
+      width: 50px; /* Largura da imagem */
+      height: 50px; /* Altura da imagem */
+      margin-right: 5px; /* Espaçamento entre a imagem e o texto */
+    }
   }
-
-  .botoes {
-    display: none; /* Esconde o menu na versão mobile */
-    flex-direction: column; /* Organiza os botões em coluna */
-    width: 100%; /* A lista de botões ocupa toda a largura disponível */
-    text-align: center; /* Centraliza os itens de texto */
-    position: absolute; /* Coloca o menu fora do fluxo normal */
-    top: 150px; /* Distância do topo */
-    left: 0; /* Alinha à esquerda */
-    background-color: #0f3969; /* Cor de fundo do menu no mobile */
-    z-index: 1; /* Coloca o menu acima dos outros itens */
-    opacity: 0; /* Inicialmente invisível */
-    transition: opacity 1s ease, transform 0.9s ease; /* Animação suave de fade-in */
-    transform: translateY(-20px); /* Inicialmente o menu está acima da sua posição */
-  }
-
-  .botoes.active {
-    display: flex; /* Exibe o menu quando a classe 'active' é adicionada */
-    opacity: 1; /* Torna o menu visível */
-    transform: translateY(0); /* Move o menu para sua posição original */
-  }
-
-  .botoes li {
-    margin: 10px 0; /* Espaçamento entre os itens no menu mobile */
-  }
-
-  .home > button {
-    margin-top: 100px; /* Espaço superior */
-  }
-  /*Pagina Home*/
-  .home {
-    display: flex; /* Exibe o conteúdo em coluna no mobile */
-    flex-direction: column-reverse; /* Organiza os itens em coluna reversa */
-    justify-content: center; /* Centraliza os itens verticalmente */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    margin-top: 150px; /* Espaço superior para garantir que o conteúdo não sobreponha a barra de navegação */
-    padding: 0 20px; /* Padding nas laterais para garantir que o conteúdo não fique colado nas bordas */
-  }
-
-  .home-coluna-esquerda,
-  .home-coluna-direita {
-    display: flex; /* Exibe o conteúdo em coluna no mobile */
-    flex-direction: column; /* Organiza os itens em coluna */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    width: 100%; /* A coluna ocupa toda a largura da tela no mobile */
-    margin-bottom: 20px; /* Espaçamento entre as colunas */
-  }
-
-  .home-coluna-direita .caminhones {
-    width: 100%; /* A imagem ocupa toda a largura da coluna */
-    height: auto; /* Mantém a altura proporcional à largura da imagem */
-    margin-top: 20px; /* Adiciona um pequeno espaço entre o botão e a imagem */
-  }
-
-  .home-coluna-esquerda h1,
-  .home-coluna-esquerda p {
-    width: 100%; /* Garante que os elementos ocupem toda a largura disponível da coluna */
-    text-align: center; /* Centraliza o texto no mobile */
-    justify-content: center; /* Centraliza o conteúdo */
-  }
-
-  /*Pagina Contato*/
-  .contato {
-    display: flex; /* Exibe o conteúdo em coluna no mobile */
-    flex-direction: column; /* Organiza os itens em coluna */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    width: 100%; /* A coluna ocupa toda a largura da tela no mobile */
-    margin-bottom: 20px; /* Espaçamento entre as colunas */
-    justify-content: center;
-  }
-
-  .contato .contato-coluna-esquerda,
-  .contato .contato-coluna-direita,
-  .contato .contato-coluna-meio {
-    width: 100%; /* A coluna ocupa toda a largura da tela no mobile */
-    margin-bottom: 20px; /* Espaçamento entre as colunas */
-    align-items: center; /* Centraliza o conteúdo */
-  }
-
-  .contato .contato-coluna-esquerda h2,
-  .contato .contato-coluna-esquerda p,
-  .contato .contato-coluna-direita h2,
-  .contato .contato-coluna-direita p {
-    width: 100%; /* Garante que os elementos ocupem toda a largura disponível da coluna */
-    text-align: center; /* Centraliza o texto no mobile */
-    justify-content: center; /* Centraliza o conteúdo */
-  }
-
-  .contato .contato-coluna-meio iframe {
-    width: 100%; /* O iframe ocupa toda a largura da coluna */
-    height: auto; /* Mantém a altura proporcional à largura do iframe */
-  }
-
-  .slider-botao.left {
-    left: 10px; /* Define a posição à esquerda */
-  }
-  
-  .slider-botao.right {
-    right: 10px; /* Define a posição à direita */
-  }
-
-  
-
-  /*Rodape*/
-  .rodape {
-    display: flex; /* Exibe o conteúdo em coluna no mobile */
-    flex-direction: column; /* Organiza os itens em coluna */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    width: 100%; /* A coluna ocupa toda a largura da tela no mobile */
-    margin-bottom: 20px; /* Espaçamento entre as colunas */
-  }
-
-  
-}
