@@ -4,219 +4,338 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>J&C Transportes</title>
+    <title>J&C Transportes - Transporte de Cargas e Frete São Paulo | Especialistas em Logística</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="J&C Transportes oferece serviços de transporte de cargas, frete e logística em São Paulo e todo Brasil. Especializados em cargas fracionadas e dedicadas com tecnologia, agilidade e segurança." />
+    <meta name="keywords" content="transporte de cargas, frete São Paulo, transportadora, logística, coleta e entrega, cargas fracionadas, transporte dedicado, J&C Transportes" />
+    <meta name="author" content="J&C Transportes" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="pt-BR" />
+    <link rel="canonical" href="https://jctransportes.com.br/" />
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="J&C Transportes - Transporte de Cargas e Frete São Paulo" />
+    <meta property="og:description" content="Especializados em cargas fracionadas e dedicadas, oferecemos cobertura nacional com agilidade, segurança e economia." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jctransportes.com.br/" />
+    <meta property="og:image" content="https://jctransportes.com.br/Logotipo1.png" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="J&C Transportes" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="J&C Transportes - Transporte de Cargas e Frete São Paulo" />
+    <meta name="twitter:description" content="Especializados em cargas fracionadas e dedicadas, oferecemos cobertura nacional com agilidade, segurança e economia." />
+    <meta name="twitter:image" content="https://jctransportes.com.br/Logotipo1.png" />
+    
     <!-- Link para o arquivo de estilo CSS -->
     <link rel="stylesheet" href="estilo.css" />
     <link rel="stylesheet" href="cotacao2.css" />
     <link rel="shortcut icon" href="Logotipo2.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Logotipo2.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Logotipo2.png">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
   </head>
   <body>
+    <!-- JSON-LD Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MovingCompany",
+      "name": "J&C Transportes",
+      "alternateName": "JC Transportes",
+      "description": "Empresa especializada em transporte de cargas fracionadas e dedicadas, oferecendo cobertura nacional com agilidade, segurança e economia.",
+      "url": "https://jctransportes.com.br",
+      "logo": "https://jctransportes.com.br/Logotipo1.png",
+      "image": "https://jctransportes.com.br/bannerfrente.png",
+      "telephone": "+55-11-2623-4660",
+      "email": "transportesjc366@gmail.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Soldado Eurípedes de Lima, 36",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "02178-030",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.52249396016407,
+        "longitude": -46.57265072540745
+      },
+      "openingHours": "Mo-Fr 08:00-18:00",
+      "serviceArea": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços de Transporte",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Transporte de Cargas Fracionadas",
+              "description": "Serviço de transporte para cargas menores com otimização de rotas"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Transporte Dedicado",
+              "description": "Serviço de transporte exclusivo para cargas específicas"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Coleta e Entrega",
+              "description": "Serviços de coleta e entrega com cobertura nacional"
+            }
+          }
+        ]
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+55-11-2623-4660",
+          "contactType": "customer service",
+          "availableLanguage": "Portuguese"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+55-11-99376-7300",
+          "contactType": "customer service",
+          "availableLanguage": "Portuguese"
+        }
+      ],
+      "sameAs": [
+        "https://wa.me/5511993767300"
+      ]
+    }
+    </script>
+    
     <!-- Barra de navegação -->
-    <header>
-      
-      <nav class="nav">
+    <header role="banner">
+      <nav class="nav" role="navigation" aria-label="Navegação principal">
           <!-- Logo -->
-          <img class="logo" src="Logotipo1.png" alt="Logotipo" width="176" height="96" />
+          <img class="logo" src="Logotipo1.png" alt="J&C Transportes - Logotipo da empresa de transporte de cargas" width="176" height="96" />
           <!-- Menu Hamburger (visível apenas em telas pequenas) -->
-          <div class="hamburger" onclick="toggleMenu()">
+          <div class="hamburger" onclick="toggleMenu()" role="button" aria-label="Abrir menu de navegação" tabindex="0">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
           </div>
           <!-- Lista de botões -->
-          <ul class="botoes">
-            <li><a class="botao1" href="#home">Home</a></li>
-            <li><a class="botao1" href="#sobrenos">Sobre Nós</a></li>
-            <li><a class="botao1" href="#contato">Contato</a></li>
-            <li><a class="botao2" href="#cotacao">Cotação de Frete</a></li>
+          <ul class="botoes" role="menubar">
+            <li role="none"><a class="botao1" href="#home" role="menuitem">Home</a></li>
+            <li role="none"><a class="botao1" href="#sobrenos" role="menuitem">Sobre Nós</a></li>
+            <li role="none"><a class="botao1" href="#contato" role="menuitem">Contato</a></li>
+            <li role="none"><a class="botao2" href="#cotacao" role="menuitem">Cotação de Frete</a></li>
           </ul>
       </nav>
     </header>
 
-    <a href="https://wa.me/5511993767300?text=Olá,%20gostaria%20de%20mais%20informações" class="whatsapp-button">
-      <img src="whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
-  </a>
+    <a href="https://wa.me/5511993767300?text=Olá,%20gostaria%20de%20mais%20informações" class="whatsapp-button" aria-label="Entrar em contato via WhatsApp">
+      <img src="whatsapp-icon.png" alt="Ícone do WhatsApp para contato direto" class="whatsapp-icon">
+    </a>
 
-    
-    <!-- Pagina Home -->
-    <div id="home" class="home">
-      <!-- Coluna da esquerda com o título, texto e botão -->
-      <div class="home-coluna-esquerda"data-aos="fade-left" data-aos-duration="2000" data-aos-offset="300" 
+    <main role="main">
+      <!-- Página Home -->
+      <section id="home" class="home">
+        <!-- Coluna da esquerda com o título, texto e botão -->
+        <div class="home-coluna-esquerda" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="300" 
+        data-aos-easing="ease-in-sine">
+          <h1>Tecnologia e eficiência no transporte de cargas</h1>
+          <p>Especializados em cargas fracionadas e dedicadas, oferecemos cobertura nacional com agilidade, segurança e economia. <br> Conte com nossos serviços de coleta e entrega para obter soluções sob medida e atendimento de excelência.</p>
+          <a class="botaohome" href="#cotacao" role="button">Cotação de Frete</a>
+        </div>
+
+        <!-- Coluna da direita com a imagem -->
+        <div class="home-coluna-direita" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="300" 
+        data-aos-easing="ease-in-sine">
+          <img class="caminhones" src="caminhones.svg" alt="Caminhões da transportadora J&C representando nossos serviços de transporte de cargas" />
+        </div>
+      </section>
+
+      <!-- Página Sobre Nós -->
+      <section id="sobrenos" class="sobrenos" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="300" 
       data-aos-easing="ease-in-sine">
-        <h1>Tecnologia e eficiência <br> no transporte de cargas</h1>
-        <p>Especializados em cargas fracionadas e dedicadas, oferecemos cobertura nacional com agilidade, segurança e economia. <br> Conte com nossos serviços de coleta e entrega para obter soluções sob medida e atendimento de excelência.</p>
-        <a class="botaohome" href="#cotacao">Cotação de Frete</a>
-      </div>
+        <h2 class="visually-hidden">Sobre a J&C Transportes e Nossos Serviços</h2>
+        <!-- Banner 1 Sobre Nos -->
+        <picture> 
+          <source media="(max-width: 440px)" srcset="https://imgur.com/u2GR6pz.png">
+          <source media="(max-width: 1034.9px)" srcset="https://imgur.com/xn1qPzY.png">
+          <img class="banner" src="bannerfrente.png" alt="Banner informativo sobre a J&C Transportes - empresa especializada em transporte de cargas" />
+        </picture>
+        <!-- Banner 2 Nossos Serviços-->
+        <picture>
+        <source media="(max-width: 440px)" srcset="https://imgur.com/m43WgFk.png">
+        <source media="(max-width: 1034.9px)" srcset="https://imgur.com/nvpy7X6.png">
+        <img class="banner" src="bannertras.png" alt="Banner sobre nossos serviços de transporte e logística em todo o Brasil" />
+        </picture>
+        <!-- Botão Esquerda -->
+        <button class="slider-botao left" onclick="plusDivs(-1)" aria-label="Banner anterior">
+          <img class="botao left" src="esquerda.png" alt="" height="20px" width="20px">
+        </button>
+        <!-- Botão Direita -->
+        <button class="slider-botao right" onclick="plusDivs(+1)" aria-label="Próximo banner">
+          <img class="botao right" src="direita.png" alt="" height="20px" width="20px">
+        </button>
+      </section>
 
-      <!-- Coluna da direita com a imagem -->
-      <div class="home-coluna-direita"data-aos="fade-left" data-aos-duration="2000" data-aos-offset="300" 
+      <!-- Página Contato -->
+      <section id="contato" class="contato" data-aos="fade-down" data-aos-duration="2000" data-aos-offset="300" 
+      data-aos-easing="linear">
+        <h2 class="visually-hidden">Contato e Localização</h2>
+        <!-- Coluna da esquerda com o título, e endereço -->
+        <div class="contato-coluna-esquerda">
+          <h3>Endereço</h3>
+          <address>
+            <strong>Galpão:</strong><br> 
+            Rua Soldado Eurípedes de Lima, 36<br> 
+            Pq.Novo Mundo<br> 
+            São Paulo-SP <br> 
+            CEP 02178-030
+          </address>
+        </div>
+
+        <!-- Coluna do meio com o mapa -->
+        <div class="contato-coluna-meio">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.2782121487585!2d-46.57265072540745!3d-23.52249396016407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5f1e966cdab1%3A0xac7ba8f095f90f77!2sR.%20Sd.%20Eur%C3%ADpedes%20Rodrigues%20Lima%2C%2036%20-%20Parque%20Novo%20Mundo%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002178-030!5e0!3m2!1spt-BR!2sbr!4v1739990134196!5m2!1spt-BR!2sbr" 
+                  style="border:2px solid var(--Color-style-secondary-Normal, #0F3969); border-radius: 15px; box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.30);"
+                  title="Localização da J&C Transportes no Google Maps"
+                  loading="lazy"></iframe>
+        </div>
+
+        <!-- Coluna da direita com os contatos -->
+        <div class="contato-coluna-direita">
+          <h3>Contatos</h3>
+          <div itemscope itemtype="https://schema.org/ContactPoint">
+            <p><strong>Tel:</strong> <a href="tel:+551126234660" itemprop="telephone">(11) 2623 - 4660</a></p>
+            <p><strong>Tel:</strong> <a href="https://wa.me/5511993767300" itemprop="telephone">(11) 9 9376 - 7300</a></p>
+            <p><strong>E-mail Geral:</strong> <a href="mailto:transportesjc366@gmail.com.br" itemprop="email">transportesjc366@gmail.com.br</a></p>
+            <p><strong>Financeiro:</strong> <a href="mailto:financeirosp@jctransporteslog.com.br" itemprop="email">financeirosp@jctransporteslog.com.br</a></p>
+            <p><strong>Cotações:</strong> <a href="mailto:cotacaosp@jctransporteslog.com.br" itemprop="email">cotacaosp@jctransporteslog.com.br</a></p>
+          </div>
+        </div>
+      </section>
+      <!-- Página Cotação -->
+      <section id="cotacao" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300" 
       data-aos-easing="ease-in-sine">
-        <img class="caminhones" src="caminhones.svg" alt="caminhao da transportadora" />
-      </div>
-    </div>
+        <h2>Faça a sua Cotação de frete!</h2>
+      <form action="javascript:void(0);" method="POST" class="formCotacao">
 
-    <!-- Pagina sobre nos -->
-    <div id="sobrenos" class="sobrenos" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="300" 
-    data-aos-easing="ease-in-sine">  
-      <!-- Banner 1 Sobre Nos -->
-      <picture> 
-        <source media="(max-width: 440px)" srcset="https://imgur.com/u2GR6pz.png">
-        <source media="(max-width: 1034.9px)" srcset="https://imgur.com/xn1qPzY.png">
-        <img class="banner" src="bannerfrente.png" alt="Banner1" />
-      </picture>
-      <!-- Banner 2 Nossos Serviços-->
-      <picture>
-      <source media="(max-width: 440px)" srcset="https://imgur.com/m43WgFk.png">
-      <source media="(max-width: 1034.9px)" srcset="https://imgur.com/nvpy7X6.png">
-      <img class="banner" src="bannertras.png" alt="Banner2" />
-      </picture>
-      <!-- Botão Esquerda -->
-      <button class="slider-botao left" onclick="plusDivs(-1)">
-        <img class="botao left" src="esquerda.png" alt="botao esquerda" height="20px" width="20px">
-      </button>
-      <!-- Botão Direita -->
-      <button class="slider-botao right" onclick="plusDivs(+1)">
-        <img class="botao right" src="direita.png" alt="botao direita" height="20px" width="20px">
-      </button>
-    </div>
-
-    <!-- Pagina Contato -->
-    <div id="contato" class="contato" data-aos="fade-down" data-aos-duration="2000" data-aos-offset="300" 
-    data-aos-easing="linear">
-      <!-- Coluna da esquerda com o título, e endereço -->
-      <div class="contato-coluna-esquerda">
-        <h2>Endereço</h2>
-        <h5>Galpão:<br> Rua Soldado Eurípedes de Lima, 36<br> Pq.Novo Mundo<br> São Paulo-SP <br> Cep 02178-030</h5>
-      </div>
-
-      <!-- Coluna do meio com o mapa -->
-      <div class="contato-coluna-meio">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.2782121487585!2d-46.57265072540745!3d-23.52249396016407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5f1e966cdab1%3A0xac7ba8f095f90f77!2sR.%20Sd.%20Eur%C3%ADpedes%20Rodrigues%20Lima%2C%2036%20-%20Parque%20Novo%20Mundo%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002178-030!5e0!3m2!1spt-BR!2sbr!4v1739990134196!5m2!1spt-BR!2sbr" style="border:2px solid var(--Color-style-secondary-Normal, #0F3969); border-radius: 15px; box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.30);"></iframe>
-      </div>
-
-      <!-- Coluna da direita com os contatos -->
-      <div class="contato-coluna-direita">
-        <h2>Contatos</h2>
-        <h5>Tel: (11) 2623 - 4660 <br>
-          <a href="https://wa.me/5511993767300">Tel: (11) 9 9376 - 7300</a> <br>
-          transportesjc366@gmail.com.br<br> 
-          financeirosp@jctransporteslog.com.br<br>
-          cotacaosp@jctransporteslog.com.br</h5>
-      </div>
-    </div>
-    <div id="cotacao" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="300" 
-    data-aos-easing="ease-in-sine" >
-      <h1>Faça a sua Cotação de frete!</h1>
-    <form action="javascript:void(0);" method="POST" class="formCotacao">
-
-    <div class="form-row-2colunas">
-      <Label>
-        <span class="texto">Nome</span> 
-        <input type="text" id="nome" name="nome" placeholder="digite seu nome"> 
-      </Label>
-        
-      
-      <Label>
-          <span class="texto">Telefone</span>
-          <input type="tel" id="telefone" name="telefone" placeholder="xx xxxxx-xxxx">
-      </Label>
-    </div>
-
-    <div class="form-row-2colunas">
-
-      <Label>
-        <span class="texto">E-mail</span> 
-        <input type="text" id="email" name="email" placeholder="exemplo@exemplo.com"> 
-    </Label>
-
-      <Label>
-          <span class="texto">CNPJ do Remetente</span> 
-          <input type="cnpj" id="cnpjRemetente" name="cnpjRemetente" placeholder="xx.xxx.xxx/xxxx-xx"> 
-      </Label>
-      
-
-      </div>
-      
-      <div class="form-row-2colunas"> 
-      <Label>
-          <span class="texto">CNPJ do Destinatario</span> 
-          <input type="cnpj" id="cnpjDestinatario" name="cnpjDestinatario" placeholder="xx.xxx.xxx/xxxx-xx"> 
-      </Label>
-      
-      <Label>
-          <span class="texto">Cidade de Destino</span> 
-          <input type="text" id="cidadeDestino" name="cidadeDestino" placeholder="Cidade e Estado"> 
-      </Label>
-    </div>
-
-    <div class="form-row-2colunas">     
-      <Label>
-          <span class="texto">Nome do Comprador</span> 
-          <input type="text" id="nomeComprador" name="nomeComprador" placeholder="digite o nome"> 
-        </Label>
-          
-      <Label>
-          <span class="texto">Telefone do comprador</span>
-            <input type="tel" id="telefoneComprador" name="telefoneComprador" placeholder="xx xxxxx-xxxx">
-      </Label>
-      
-     </div>
-     <div class="form-row-2colunas">
-      <Label>
-          <span class="texto">CNPJ Pagador do frete</span> 
-          <input type="cnpj" id="cnpjPagador" name="cnpjPagador" placeholder="xx.xxx.xxx/xxxx-xx"> 
-      </Label>
-       
-      <Label>
-          <span class="texto">Tipo da mercadoria</span> 
-          <input type="text" id="mercadoriaTipo" name="mercadoriaTipo" placeholder="exemplo:Moveis"> 
-      </Label>
-    </div>
-    <div class="form-row-2colunas"> 
-      <Label>
-          <span class="texto">Quantidade de volumes</span> 
-          <input type="text" id="mercadoriaVolume" name="mercadoriaVolume" placeholder="Digite a quantidade de volumes"> 
-      </Label>
-
-      <Label>
-          <span class="texto">Peso total</span> 
-          <input type="text" id="mercadoriaPeso" name="mercadoriaPeso" placeholder="Digite o peso"> 
-      </Label>
-      </div>
       <div class="form-row-2colunas">
-      <Label>
-          <span class="texto">Valor da mercadoria</span> 
-          <input type="text" id="mercadoriaValor" name="mercadoriaValor" placeholder="Digite o valor da mercadoria"> 
-      </Label>
-
-      <Label>
-          <span class="texto">Medidas dos volumes (cm)</span> 
-          <input type="text" id="mercadoriaAltura" name="mercadoriaAltura" placeholder="Altura x Largura x Comprimento">
-      </Label>
-
+        <label>
+          <span class="texto">Nome</span> 
+          <input type="text" id="nome" name="nome" placeholder="digite seu nome" required> 
+        </label>
+          
+        
+        <label>
+            <span class="texto">Telefone</span>
+            <input type="tel" id="telefone" name="telefone" placeholder="xx xxxxx-xxxx" required>
+        </label>
       </div>
 
-      <button class="botaoCotar" type="submit">COTAR</button>
+      <div class="form-row-2colunas">
+
+        <label>
+          <span class="texto">E-mail</span> 
+          <input type="email" id="email" name="email" placeholder="exemplo@exemplo.com" required> 
+      </label>
+
+        <label>
+            <span class="texto">CNPJ do Remetente</span> 
+            <input type="text" id="cnpjRemetente" name="cnpjRemetente" placeholder="xx.xxx.xxx/xxxx-xx"> 
+        </label>
+        
+
+        </div>
+        
+        <div class="form-row-2colunas"> 
+        <label>
+            <span class="texto">CNPJ do Destinatário</span> 
+            <input type="text" id="cnpjDestinatario" name="cnpjDestinatario" placeholder="xx.xxx.xxx/xxxx-xx"> 
+        </label>
+        
+        <label>
+            <span class="texto">Cidade de Destino</span> 
+            <input type="text" id="cidadeDestino" name="cidadeDestino" placeholder="Cidade e Estado" required> 
+        </label>
       </div>
 
+      <div class="form-row-2colunas">     
+        <label>
+            <span class="texto">Nome do Comprador</span> 
+            <input type="text" id="nomeComprador" name="nomeComprador" placeholder="digite o nome"> 
+          </label>
+            
+        <label>
+            <span class="texto">Telefone do comprador</span>
+              <input type="tel" id="telefoneComprador" name="telefoneComprador" placeholder="xx xxxxx-xxxx">
+        </label>
+        
+       </div>
+       <div class="form-row-2colunas">
+        <label>
+            <span class="texto">CNPJ Pagador do frete</span> 
+            <input type="text" id="cnpjPagador" name="cnpjPagador" placeholder="xx.xxx.xxx/xxxx-xx"> 
+        </label>
+         
+        <label>
+            <span class="texto">Tipo da mercadoria</span> 
+            <input type="text" id="mercadoriaTipo" name="mercadoriaTipo" placeholder="exemplo:Móveis" required> 
+        </label>
+      </div>
+      <div class="form-row-2colunas"> 
+        <label>
+            <span class="texto">Quantidade de volumes</span> 
+            <input type="number" id="mercadoriaVolume" name="mercadoriaVolume" placeholder="Digite a quantidade de volumes" min="1" required> 
+        </label>
 
-  
-      
-  </form>
+        <label>
+            <span class="texto">Peso total</span> 
+            <input type="text" id="mercadoriaPeso" name="mercadoriaPeso" placeholder="Digite o peso (kg)" required> 
+        </label>
+        </div>
+        <div class="form-row-2colunas">
+        <label>
+            <span class="texto">Valor da mercadoria</span> 
+            <input type="text" id="mercadoriaValor" name="mercadoriaValor" placeholder="Digite o valor da mercadoria (R$)" required> 
+        </label>
+
+        <label>
+            <span class="texto">Medidas dos volumes (cm)</span> 
+            <input type="text" id="mercadoriaAltura" name="mercadoriaAltura" placeholder="Altura x Largura x Comprimento" required>
+        </label>
+
+        </div>
+
+        <button class="botaoCotar" type="submit">COTAR</button>
+        </div>
+
+    </form>
+      </section>
+    </main>
     
     <!-- Rodapé -->
     <div class="rodape">
       <!-- Logo -->
       <div class="logo-rodape">
-        <img class="logo2" src="Logotipo2.png" alt="LogotipoRodape" width="176" height="96" />
+        <img class="logo2" src="Logotipo2.png" alt="J&C Transportes - Logotipo da empresa" width="176" height="96" />
       </div>
       <h3>“O Senhor é meu Pastor, nada me faltará”</h3>
     </div>
 
         <!-- Link para o arquivo JS do AOS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
       
     <!-- Inicializando o AOS -->
     <script>
