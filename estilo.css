@@ -187,7 +187,7 @@ img, picture{ max-width: 100%; display: block; }
 /* Contato */
 .contato{
   display: flex; flex-direction: column; gap: 24px; align-items: center;
-  width: 100%; max-width: 1200px; margin: 10px auto 100px; padding: 0 16px; min-height: 100vh;
+  width: 100%; max-width: 1200px; margin: 10px auto 0; padding: 0 16px; min-height: 100vh;
 }
 .contato .contato-coluna-esquerda,
 .contato .contato-coluna-direita,

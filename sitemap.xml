@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://jctransportes.vercel.app/</loc>
+    <lastmod>2025-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://jctransportes.vercel.app/"/>
+
+    <!-- Imagens principais -->
+    <image:image>
+      <image:loc>https://jctransportes.vercel.app/Logotipo1.png</image:loc>
+      <image:title>J&amp;C Transportes - Logotipo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jctransportes.vercel.app/Logotipo2.png</image:loc>
+      <image:title>J&amp;C Transportes - Logotipo alternativo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jctransportes.vercel.app/bannertras.png</image:loc>
+      <image:title>Banner institucional - J&amp;C Transportes</image:title>
+    </image:image>
+
+    <!-- Vídeo hero -->
+    <video:video>
+      <video:thumbnail_loc>https://jctransportes.vercel.app/bannertras.png</video:thumbnail_loc>
+      <video:title>Transporte de cargas — J&amp;C Transportes</video:title>
+      <video:description>Vídeo institucional de caminhão em operação nas rodovias brasileiras.</video:description>
+      <video:content_loc>https://jctransportes.vercel.app/caminhaovideo.mp4</video:content_loc>
+      <video:publication_date>2025-09-03T08:00:00+08:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://jctransportes.vercel.app/#quem-somos</loc>
+    <lastmod>2023-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jctransportes.vercel.app/#contato</loc>
+    <lastmod>2023-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jctransportes.vercel.app/#cotacao-rapido</loc>
+    <lastmod>2023-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jctransportes.vercel.app/#faq</loc>
+    <lastmod>2023-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
